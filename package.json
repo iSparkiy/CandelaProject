@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rbxtsc",
-    "watch": "rbxtsc -w"
+    "watch": "concurrently -n \"rbxtsc,rojo\" -c \"blue,green\" \"rbxtsc -w\" \"rojo build --watch -o C:\\Users\\Spark.DESKTOP-MM9K7PO\\AppData\\Local\\Roblox\\Plugins\\CandelaVFX.rbxm\""
   },
   "keywords": [],
   "author": "",
@@ -23,5 +23,18 @@
     "prettier": "^3.5.3",
     "roblox-ts": "^3.0.0",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@rbxts/charm": "^0.10.0",
+    "@rbxts/chroma": "^1.0.1",
+    "@rbxts/comet": "^2.0.0",
+    "@rbxts/janitor": "^1.18.3-ts.0",
+    "@rbxts/jsnatives": "^1.1.5",
+    "@rbxts/lemon-signal": "^1.2.0",
+    "@rbxts/pretty-react-hooks": "^0.6.4",
+    "@rbxts/react": "^17.2.3",
+    "@rbxts/react-charm": "^0.3.0",
+    "@rbxts/react-roblox": "^17.2.3",
+    "concurrently": "^9.1.2"
   }
 }

@@ -1,16 +1,14 @@
 import { atom } from "@rbxts/charm";
-import { System } from "@rbxts/comet";
+import { OnStart, System } from "@rbxts/comet";
 import { about } from "about";
 import { viewAtoms } from "data/viewAtoms";
 
 @System()
-export class ViewSystem {
+export class ViewSystem implements OnStart{
+    public get Title() {return viewAtoms.Title()}
+    public set Title(value : string) {viewAtoms.Title(value)}
 
-    constructor() {
-
-    }
-
-    private setTitle(title : string) {
-        viewAtoms.Title(title)
+    public onStart(): void {
+        this.Title = `Candela v${about.version}`; //about.version;
     }
 }

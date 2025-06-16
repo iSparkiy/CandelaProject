@@ -35,6 +35,7 @@
     "@rbxts/react": "^17.2.3",
     "@rbxts/react-charm": "^0.3.0",
     "@rbxts/react-roblox": "^17.2.3",
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "rbxts-transformer-setget": "^2.0.0"
   }
 }

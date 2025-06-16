@@ -14,8 +14,7 @@ export class CoreSystem implements OnStart{
     }
 
     public onStart(): void {
-        Logger.verbose("Core System Initialized")
         this.View.linkButton(this.Button);
-        this.View.mount(mountUi);
+        this.View.mount(mountUi)
     }
 }
